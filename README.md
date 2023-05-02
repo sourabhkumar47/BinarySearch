@@ -1,2 +1,2 @@
-# DSA with KK
-Leetcode-Solutions
+# DSA with Kunal Kushwaha 
+Leetcode-Solutions Shared on WeMakeDevs gitub .
