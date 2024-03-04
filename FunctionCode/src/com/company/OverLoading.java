@@ -6,7 +6,7 @@ public class OverLoading {
      */
     public static void main(String[] args) {
 
-        fun(2);     // If we not give any paramenter it give embigiuity error
+        fun(2);     // If we not give any parameter it gives ambiguity error
         fun("sourabh");
 
     }

@@ -24,17 +24,28 @@ public class Prime_or_not {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
 
+        System.out.println(isPrime(n));
+
+
     }
 //        int c= 2;
-
-
-//    static boolean isprime(int n){
+//    static boolean isPrime(int n){
 //        if (n<=1)
 //            return false;
 //        else if (n==2)
 //            return true;
 
-
+    static Boolean isPrime(int n){
+        if(n<=1)
+            return true;
+        int c = 2;
+        while (c*c <= n){
+            if (n%c==0)
+                return false;
+            c++;
+        }
+        return true;
+    }
 }
 
 
