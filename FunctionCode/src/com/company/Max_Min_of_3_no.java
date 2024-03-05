@@ -4,7 +4,7 @@ public class Max_Min_of_3_no {
     public static void main(String[] args) {
 
         int maxAns = max(2, 8, 7,5);
-        int minAns = min(2, 5, 7);
+        int minAns = min(12, 2, 3);
         System.out.println("max is " + maxAns);
         System.out.println("min is " + minAns);
     }
@@ -31,7 +31,7 @@ public class Max_Min_of_3_no {
 
         int min = a;
 
-        if (b < min) {
+        if (b < min && b<c) {
             min = b;
         }
         if (c < min) {

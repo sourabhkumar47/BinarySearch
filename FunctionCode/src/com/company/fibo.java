@@ -15,7 +15,9 @@ public class fibo {
             b=a+b;
             a=temp;
             count++;
+            System.out.println(count);
+//            System.out.println(a);
         }
-        System.out.println(b);
+//        System.out.println(b);
     }
 }
