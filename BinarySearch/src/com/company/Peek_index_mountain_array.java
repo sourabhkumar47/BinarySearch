@@ -6,13 +6,13 @@ public class Peek_index_mountain_array {
         int[] arr = {3, 5, 6, 7, 8, 15, 4, 3, 2, 1};
 
     }
-    public int findInMountainArray(int target, MountainArray mountainArr) {
-        int peak = peakIndexInMountainArray(MountainArray);
-        int firstTry = binarysearch(MountainArray,target,0,peak);
+    public int findInMountainArray(int target, int[] mountainArr) {
+        int peak = peakIndexInMountainArray(mountainArr);
+        int firstTry = binarysearch(mountainArr,target,0,peak);
         if(firstTry != -1){
             return firstTry;
         }else{
-            return binarysearch(MountainArray,target,peak,arr.leanght-1);
+            return binarysearch(mountainArr,target,peak,mountainArr.length-1);
         }
     }
 
