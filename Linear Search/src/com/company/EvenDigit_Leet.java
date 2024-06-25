@@ -1,13 +1,15 @@
 package com.company;
 
+//
 public class EvenDigit_Leet {
     public static void main(String[] args) {
     int[] nums = {12,345,2,6,7896};
     }
     static int findNumbers(int[] nums) {
         int count=0;
-        for (int num: nums) {
-            if (even(num)){
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            if (even(num)) {
                 count++;
             }
         }

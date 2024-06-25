@@ -16,7 +16,7 @@ public class OrderAgnosticBS {
 
         //Find weather arr is ascending or descending
         //Return true or false , true for asc and false for dec
-        boolean isAsc = arr[start] > arr[end];
+        boolean isAsc = arr[start] < arr[end];
 
         while (start <= end) {
             //Find middle element
@@ -29,14 +29,14 @@ public class OrderAgnosticBS {
                 return mid;
 
             if (isAsc) {
-                if (target > arr[mid]){
+                if (target < arr[mid]){
                     end = mid-1;
                 }
                 else{
                 start = mid + 1;
             }}
             else {
-                if (target < arr[mid]){
+                if (target > arr[mid]){
                     end = mid-1;
                 }
                 else{

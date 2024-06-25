@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Swap {
     public static void main(String[] args) {
         //Here we're swapping values in the array
-            int[] arr={24,345,3454,246,54};
+            int[] arr={24,345,3454,246,54,43};
         //Here 0 and 4 are index that we want to swap
         reverse(arr);
         System.out.println(Arrays.toString(arr));

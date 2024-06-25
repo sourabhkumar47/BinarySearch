@@ -10,12 +10,16 @@ public class Max_Val {
     //Assume array is !=0
     static int min(int[] arr){
         int ans=arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i]>ans){
-                ans=arr[i];
+        try {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i]>ans){
+                    ans=arr[i];
+                }
             }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         return ans;
     }
-    }
+}
 
