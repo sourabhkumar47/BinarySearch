@@ -2,11 +2,13 @@ package com.company;
 
 public class OrderAgnosticBS {
    public static void main(String[] args) {
-        int[] arr = {0, 2, 4, 6, 45, 96, 105, 450};
+        int[] arr = {0, 2, 4, 5, 45, 96, 105, 450};
         int[] arr2 ={450,150,80,60,50,45,30,10,5};
-        int target = 5;
-        int ans=orderAgnosticBS(arr2,target);
-        System.out.println(ans);
+        int target = 45;
+//        int ans=orderAgnosticBS(arr,target);
+        int ans2=orderAgnosticBS(arr2,target);
+//        System.out.println(ans);
+        System.out.println(ans2);
     }
 
     static int orderAgnosticBS(int[] arr, int target) {

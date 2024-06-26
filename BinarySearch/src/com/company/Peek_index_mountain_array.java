@@ -1,19 +1,22 @@
 package com.company;
 
 //https://leetcode.com/problems/peak-index-in-a-mountain-array/
+//https://leetcode.com/problems/find-in-mountain-array/
 public class Peek_index_mountain_array {
     public static void main(String[] args) {
         int[] arr = {3, 5, 6, 7, 8, 15, 4, 3, 2, 1};
 
     }
+
     public int findInMountainArray(int target, int[] mountainArr) {
         int peak = peakIndexInMountainArray(mountainArr);
-        int firstTry = binarysearch(mountainArr,target,0,peak);
-        if(firstTry != -1){
-            return firstTry;
-        }else{
-            return binarysearch(mountainArr,target,peak,mountainArr.length-1);
-        }
+//        int firstTry = binarysearch(mountainArr, target, 0, peak);
+//        if (firstTry != -1) {
+//            return firstTry;
+//        } else {
+//            return binarysearch(mountainArr, target, peak, mountainArr.length - 1);
+//        }
+        return -1;
     }
 
     static int peakIndexInMountainArray(int[] arr) {
@@ -43,25 +46,28 @@ public class Peek_index_mountain_array {
     }
 
 
-    static int binarysearch(int[] arr, int target,int start,int end) {
+    static int OrderAugnosticBinarySearch(int[] arr, int target, int start, int end) {
+
+        boolean isAsc = arr[start] < arr[end];
 
         while (start <= end) {
-            //Find middle element
-
-            //int mid=(start + end)/2; //Here is an error
-            //Might be ( start+end ) > int range , so it give error to fix
-            int mid = start + (end - start) / 2; //to get solve equation, it is same as above
-
-            if (target < arr[mid]) {
-                end = mid - 1;
-            } else if (target > arr[mid]) {
-                start = mid + 1;
-            } else {
-                //Ans
+            int mid = start + (end - start) / 2;
+            if (target == mid) {
                 return mid;
             }
+            if (isAsc) {
+                if (target < arr[mid]) {
+                    end = mid - 1;
+                } else
+                    start = mid + 1;
+            } else {
+                if (target > arr[mid]) {
+                    end = mid - 1;
+                } else
+                    start = mid + 1;
+            }
+
         }
-        //Return when element not found
         return -1;
     }
 }
